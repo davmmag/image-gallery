@@ -1,0 +1,20 @@
+.footer {
+  background-color: var(--color-black);
+}
+
+.footer__container {
+  padding-top: 53px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__text {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 50px;
+  color: var(--color-white);
+}
+
