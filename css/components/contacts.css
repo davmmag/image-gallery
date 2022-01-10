@@ -1,0 +1,25 @@
+.contacts {
+  background-image: url(../../assets/img/contacts-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.contacts__container {
+  padding-top: 61px;
+  padding-bottom: 193px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contacts__block {
+  max-width: 450px;
+  width: 100%;
+}
+
+.contacts__title {
+  margin-bottom: 41px;
+}
+
+.contacts__btn {
+  padding: 8px 40px;
+}
