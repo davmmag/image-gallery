@@ -3,19 +3,18 @@
 }
 
 .portfolio__container {
-  padding-top: 76px;
+  padding-top: 100px;
 }
 
 .portfolio__list {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 60px;
   max-width: 895px;
   width: 100%;
   margin: 0 auto 60px;
 }
 
-.portsolio__item:not(:last-child) {
+.portfolio__item:not(:last-child) {
   margin-right: 5px;
 }
 
