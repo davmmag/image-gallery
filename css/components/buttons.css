@@ -1,0 +1,35 @@
+.btn {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  border-radius: 4px;
+  transition: all .2s ease;
+  display: block;
+  cursor: pointer;
+}
+
+.btn_mongoose {
+  background-color: var(--color-mongoose);
+  color: var(--color-black);
+}
+
+.btn_mongoose:hover {
+  color: var(--color-white);
+}
+
+.btn_black {
+  background-color: var(--color-black);
+  padding: 8px 76px;
+  color: var(--color-mongoose);
+  border: 1px solid var(--color-mongoose);
+}
+
+.btn_black:hover {
+  border: 1px solid var(--color-white);
+  color: var(--color-white);
+}
+
+
+
+
