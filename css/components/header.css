@@ -1,10 +1,14 @@
 .header {
-  padding: 20px 0;
+  background: url('../../assets/img/hero-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center 0;
 }
 .header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .header__container svg  {
