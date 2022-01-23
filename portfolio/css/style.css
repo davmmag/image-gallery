@@ -1,0 +1,27 @@
+@import 'normalize.css';
+@import 'fonts.css';
+@import 'config.css';
+
+/* componetnts */
+
+@import 'components/header.css';
+@import 'components/hero.css';
+@import 'components/skills.css';
+@import 'components/portfolio.css';
+@import 'components/video.css';
+@import 'components/price.css';
+@import 'components/contacts.css';
+@import 'components/footer.css';
+
+
+@import 'components/nav.css';
+@import 'components/buttons.css';
+
+
+
+
+:root {
+  --color-mongoose: #bdae82;
+  --color-black: #000000;
+  --color-white: #ffffff;
+}

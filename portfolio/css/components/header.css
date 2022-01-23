@@ -1,0 +1,29 @@
+.header {
+  background: url('../../assets/img/hero-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center 0;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.header__container svg  {
+  cursor: pointer;
+}
+
+.header__container svg:hover {
+  stroke: var(--color-mongoose);
+  fill: var(--color-mongoose);
+}
+
+.header__list {
+  display: flex;
+}
+
+.header__nav {
+  margin-right: 31px;
+}

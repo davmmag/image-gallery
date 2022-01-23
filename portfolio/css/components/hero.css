@@ -1,0 +1,23 @@
+.hero {
+  background: url('../../assets/img/hero-bg.jpg');
+  background-position: center -90px;
+  background-repeat: no-repeat;
+  padding: 160px 0 329px 80px;
+}
+
+.hero__block {
+  max-width: 482px;
+  width: 100%;
+}
+
+.hero__title {
+  margin-bottom: 10px;
+}
+
+.hero__text {
+  margin-bottom: 25px;
+}
+
+.hero__btn {
+  padding: 8px 75px;
+}
