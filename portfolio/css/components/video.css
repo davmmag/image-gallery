@@ -4,7 +4,6 @@
 
 .video__container {
   padding-top: 74px;
-
 }
 
 .video__title {
@@ -51,4 +50,26 @@
 .video__title::after {
   top: 48%;
   right: 25%;
+}
+
+@media(max-width: 768px) {
+  .video__container {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .video__title {
+    margin-bottom: 70px;
+  }
+
+  .video__player {
+    height: 418px;
+    background-size: cover;
+  }
+
+  .video__player svg {
+    width: 65px;
+    height: 69px;
+    top: 42%;
+    left: 46%;
+  }
 }
