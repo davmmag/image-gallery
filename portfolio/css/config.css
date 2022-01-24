@@ -12,7 +12,7 @@ html {
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
-  background-color: #ffffff;
+  background-color: var(--color-black);
   color: var(--color-white);
 }
 
@@ -63,7 +63,9 @@ p {
   cursor: pointer;
 }
 
-
+.burger {
+  display: none;
+}
 
 .title_xl {
   font-family: 'Merriweather', sans-serif;

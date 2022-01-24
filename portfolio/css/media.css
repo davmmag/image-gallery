@@ -1,0 +1,13 @@
+@media(max-width: 768px) {
+    .header__nav {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .lang__list {
+        margin-right: 20px;
+    }
+}

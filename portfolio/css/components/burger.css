@@ -1,0 +1,35 @@
+.burger {
+    align-self: center;
+}
+
+.burger-menu {
+    position: relative;
+}
+
+.burger-menu > div {
+    display: block;
+    width: 53px;
+    height: 2px;
+    background-color: var(--color-white);
+}
+
+
+.burger-menu > div::before,
+.burger-menu > div::after {
+  display: block;
+  position: absolute;
+  width: 53px;
+  height: 2px;
+  background-color: var(--color-white);
+  right: 0;
+}
+
+.burger-menu > div::before {
+    content: '';
+    top: -12px;
+}
+.burger-menu > div::after {
+    content: '';
+    top: 12px;
+}
+
