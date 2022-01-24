@@ -2,6 +2,7 @@
   background: url('../../assets/img/hero-bg.jpg');
   background-repeat: no-repeat;
   background-position: center 0;
+  position: relative;
 }
 .header__container {
   display: flex;

@@ -7,10 +7,6 @@
         display: none;
     }
 
-    .burger {
-        display: block;
-    }
-
     .header__container {
         padding-right: 60px;
         padding-left: 60px;
@@ -18,6 +14,14 @@
 
     .lang__list {
         margin-right: 20px;
+    }
+
+    .burger-toggle {
+        display: block;
+    }
+
+    .lang__item:not(:last-child) {
+        margin-right: 25px;
     }
 
     .hero {

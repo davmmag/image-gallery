@@ -72,4 +72,10 @@
     top: 42%;
     left: 46%;
   }
+
+  .video__title::after,
+  .video__title::before {
+    width: 120px;
+    height: 2px;
+  }
 }

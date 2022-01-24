@@ -5,9 +5,6 @@
 .footer__container {
   padding-top: 53px;
   padding-bottom: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .footer__text {
@@ -16,5 +13,38 @@
   font-size: 20px;
   line-height: 50px;
   color: var(--color-white);
+}
+
+.footer__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+@media(max-width:768px) {
+  .footer__container {
+    display: block;
+    margin: 0 auto;
+    padding-top: 16px;
+    padding-bottom: 10px;
+  }
+
+  .footer__block {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer__text {
+    line-height: 40px;
+  }
+
+  .footer__text {
+    line-height: 40px;
+  }
+
+  .footer__text:not(:first-child) {
+    margin-bottom: 25px;
+  }
 }
 

@@ -27,3 +27,10 @@ console.log(`
 Интерактивность, реализуемая через css +20
 Score: 100
 `);
+
+const menu = document.querySelector('.menu-btn');
+menu.addEventListener('click', e => {
+    e.preventDefault();
+    menu.classList.toggle('menu-btn__active');
+    document.querySelector('.burger').classList.toggle('burger-active')
+})

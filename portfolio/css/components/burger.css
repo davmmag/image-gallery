@@ -1,35 +1,87 @@
-.burger {
-    align-self: center;
+.burger-toggle {
+    display: flex;
+    justify-content: flex-end;
+    z-index: 2;
+    padding-right: 5px;
+    display: none;
 }
 
-.burger-menu {
+.menu-btn {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
     position: relative;
 }
 
-.burger-menu > div {
-    display: block;
+.menu-btn span,
+.menu-btn span::before,
+.menu-btn span::after {
+    position: absolute;
+    top: 50%;margin-top: -1px;
+    left: 51%;margin-left: -27px;
     width: 53px;
     height: 2px;
     background-color: var(--color-white);
 }
 
-
-.burger-menu > div::before,
-.burger-menu > div::after {
-  display: block;
-  position: absolute;
-  width: 53px;
-  height: 2px;
-  background-color: var(--color-white);
-  right: 0;
+.menu-btn span::before,
+.menu-btn span::after {
+    content: "";
+    display: block;
+    transition: 0.5s;
 }
 
-.burger-menu > div::before {
-    content: '';
-    top: -12px;
-}
-.burger-menu > div::after {
-    content: '';
-    top: 12px;
+.menu-btn span::before {
+    transform: translateY(-11px);
 }
 
+.menu-btn span::after {
+    transform: translateY(11px);
+}
+
+.menu-btn__active span {
+    height: 0;
+}
+
+.menu-btn__active span::before {
+    transform: rotate(45deg);
+}
+
+.menu-btn__active span::after{
+    transform: rotate(-45deg);
+}
+
+
+.burger {
+    display: none;
+    transition: all .9s ease;
+}
+
+.burger-active {
+    transform: translateX(20px);
+    padding: 134px 0 0 106px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-black);
+    height: 100vh;
+    width: 620px;
+    position: fixed;
+    top: 0;
+    left: 148px;
+    z-index: 1;
+}
+
+.burger__item:not(:last-child) {
+    margin-bottom: 13px;
+}
+
+.burger__link {
+    color: var(--color-white);
+    font-family: "Inter", sans-serif;
+    font-size: 35px;
+    line-height: 75px;
+}
+
+.burger__list {
+    z-index: 1;
+}

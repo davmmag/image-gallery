@@ -98,6 +98,11 @@
   }
 
   .portfolio__item:nth-child(1),
+  .portfolio__item:nth-child(2) {
+    margin-bottom: 5px;
+  }
+
+  .portfolio__item:nth-child(1),
   .portfolio__item:nth-child(3) {
     margin-right: 5px;
   }
@@ -110,5 +115,11 @@
     justify-content: center;
     margin: 0 auto;
     grid-template-columns: none;
+  }
+
+  .portfolio__title::after,
+  .portfolio__title::before {
+    width: 90px;
+    height: 2px;
   }
 }
