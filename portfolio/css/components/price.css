@@ -74,3 +74,33 @@
   top: 48%;
   right: 25%;
 }
+
+@media(max-width: 768px) {
+  .price__container {
+    padding-bottom: 74px;
+  }
+
+  .price__items {
+    row-gap: 45px;
+  }
+  .price__item {
+    padding-left: 0;
+    padding-right: 0;
+    width: 420px;
+    margin: 0 auto;
+  }
+
+  .price__title {
+    margin-bottom: 68px;
+  }
+
+  .price button {
+    margin: 0 auto;
+  }
+
+  .price__title::after,
+  .price__title::before {
+    width: 120px;
+    height: 2px;
+  }
+}

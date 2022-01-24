@@ -1,2 +1,2 @@
 # davmmag-JSFEPRESCHOOL
-Private repository for @davmmag
+https://rolling-scopes-school.github.io/davmmag-JSFEPRESCHOOL/portfolio/

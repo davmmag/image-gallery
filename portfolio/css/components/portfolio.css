@@ -9,9 +9,19 @@
 .portfolio__list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   max-width: 895px;
   width: 100%;
   margin: 0 auto 60px;
+}
+
+.portfolio__btn {
+  width: 220px;
+  height: 55px;
+  background-color: var(--color-black);
+  color: var(--color-mongoose);
+  border: 1px solid var(--color-mongoose);
+  padding: 0;
 }
 
 .portfolio__item:not(:last-child) {
@@ -62,4 +72,54 @@
   background-repeat: no-repeat;
   width: 460px; 
   height: 560px;  
+}
+
+@media(max-width: 768px) {
+  .portfolio__container {
+      padding-top: 72px;
+      padding-bottom: 30px;
+  }
+
+  .portfolio__list {
+      max-width: 450px;
+      justify-content: center;
+  }
+
+  .portfolio__item:not(:last-child) {
+    margin: 0;
+  }
+
+  .portfolio__title {
+    margin-bottom: 71px;
+  }
+
+  .portfolio__item {
+      margin: 0;
+  }
+
+  .portfolio__item:nth-child(1),
+  .portfolio__item:nth-child(2) {
+    margin-bottom: 5px;
+  }
+
+  .portfolio__item:nth-child(1),
+  .portfolio__item:nth-child(3) {
+    margin-right: 5px;
+  }
+
+  .portfolio__btn {
+      margin: 0;
+  }
+
+  .portfolio__gallery {
+    justify-content: center;
+    margin: 0 auto;
+    grid-template-columns: none;
+  }
+
+  .portfolio__title::after,
+  .portfolio__title::before {
+    width: 90px;
+    height: 2px;
+  }
 }

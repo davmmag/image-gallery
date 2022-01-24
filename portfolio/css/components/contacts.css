@@ -23,3 +23,25 @@
 .contacts__btn {
   padding: 8px 40px;
 }
+
+@media(max-width:768px) {
+  .contacts {
+    background-size: cover;
+    background-position: -235px 0;
+  }
+  .contacts__container {
+    padding-top: 72px;
+    padding-bottom: 111px;
+  }
+
+  .contacts__block {
+    margin: 0 auto;
+  }
+
+  .contacts__title {
+    margin-bottom: 52px;
+  }
+  .contacts button {
+    margin: 0 auto;
+  }
+}
