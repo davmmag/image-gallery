@@ -1,7 +1,6 @@
 .contacts {
   background-image: url(../../assets/img/contacts-bg.jpg);
   background-repeat: no-repeat;
-  background-size: contain;
 }
 
 .contacts__container {
@@ -18,6 +17,7 @@
 
 .contacts__title {
   margin-bottom: 41px;
+  padding: 0;
 }
 
 .contacts__btn {
@@ -40,6 +40,7 @@
 
   .contacts__title {
     margin-bottom: 52px;
+    text-align: center;
   }
   .contacts button {
     margin: 0 auto;

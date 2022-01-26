@@ -3,6 +3,7 @@
   background-position: center -90px;
   background-repeat: no-repeat;
   padding: 160px 0 329px 80px;
+  color: var(--color-white);
 }
 
 .hero__block {

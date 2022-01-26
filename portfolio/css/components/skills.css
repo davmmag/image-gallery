@@ -1,5 +1,6 @@
 .skills {
   background-color: var(--color-black);
+  color: var(--color-mongoose);
 }
 
 .skills__container {
