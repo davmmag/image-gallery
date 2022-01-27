@@ -1,5 +1,6 @@
 .price {
-  background-color: var(--color-black);
+  background-color: var(--first-color);
+  color: var(--second-color);
 }
 
 .price__container {
@@ -46,6 +47,7 @@
   line-height: 28px;
   font-weight: 700;
   margin-bottom: 29px;
+  color: var(--color-mongoose);
 }
 .price button {
   margin: 0 auto;
@@ -64,9 +66,11 @@
   font-size: 18px;
   line-height: 36px;
   text-align: center;
-  color: var(--color-white);
+  color: var(--thirty-color);
 }
 
+
+/* Media Queries */
 @media(max-width: 768px) {
   .price__container {
     padding-bottom: 74px;

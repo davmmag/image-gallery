@@ -22,3 +22,31 @@
 .hero__btn {
   padding: 8px 75px;
 }
+
+
+/* Media Queries */
+@media(max-width: 768px) {
+  .hero {
+    padding: 78px 0 150px 60px;
+    background: url(../../assets/img/small-bg.jpg);
+    background-position: center -92px;
+    background-repeat: no-repeat;
+  }
+
+  .hero__block {
+      max-width: 425px;
+  }
+
+  .hero__title {
+      font-size: 32px;
+      line-height: 64px;
+      font-weight: 400;
+      margin-bottom: 21px;
+  }
+
+  .hero__text {
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 59px;
+  }
+}

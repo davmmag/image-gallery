@@ -28,3 +28,41 @@
 .header__nav {
   margin-right: 31px;
 }
+
+.lang__list {
+  margin-right: 35px;
+}
+
+.header__theme {
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .header {
+    background: url(../../assets/img/small-bg.jpg);
+    background-position: center 0;
+  }
+  .header__nav {
+      display: none;
+  }
+
+  .header__container {
+      padding-right: 60px;
+      padding-left: 60px;
+  }
+
+  .lang__list {
+      margin-right: 20px;
+  }
+
+  .burger-toggle {
+      display: block;
+  }
+
+  .lang__item:not(:last-child) {
+      margin-right: 25px;
+  }
+}

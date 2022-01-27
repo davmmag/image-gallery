@@ -1,5 +1,6 @@
 .video {
-  background-color: var(--color-black);
+  background-color: var(--first-color);
+  color: var(--second-color);
 }
 
 .video__container {
@@ -30,6 +31,8 @@
   fill: var(--color-mongoose);
 }
 
+
+/* Media Queries */
 @media(max-width: 768px) {
   .video__container {
     padding-right: 0;

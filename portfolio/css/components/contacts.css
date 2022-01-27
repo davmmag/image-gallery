@@ -16,6 +16,7 @@
 }
 
 .contacts__title {
+  color: var(--color-mongoose);
   margin-bottom: 41px;
   padding: 0;
 }
@@ -23,6 +24,8 @@
 .contacts__btn {
   padding: 8px 40px;
 }
+
+/* Media Queries */
 
 @media(max-width:768px) {
   .contacts {

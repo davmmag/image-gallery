@@ -22,6 +22,7 @@
 }
 
 
+/* Media Queries */
 @media(max-width:768px) {
   .footer__container {
     display: block;
