@@ -4,7 +4,7 @@
 }
 
 .video__container {
-  padding-top: 91px;
+  padding-top: 93px;
 }
 
 .video__title {
@@ -45,6 +45,11 @@
   .video__player {
     height: 418px;
     background-size: cover;
+    object-fit: contain;
+  }
+
+  .video__player img {
+    height: 100%;
   }
 
   .video__player svg {

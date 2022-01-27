@@ -77,12 +77,13 @@
   }
 
   .price__title {
-    margin-bottom: 68px;
+    margin-bottom: 70px;
   }
 
   .price__items {
     grid-template-columns: auto;
     grid-template-rows: auto;
+    row-gap: 49px;
   }
 
   .price button {

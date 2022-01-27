@@ -36,6 +36,7 @@
 .header__theme {
   cursor: pointer;
   transition: all .2s ease-in-out;
+  margin-right: 30px;
 }
 
 
