@@ -19,3 +19,23 @@ setTheme('dark');
 themeBtn.addEventListener('click', () => {
     changeTheme();
 })
+
+
+//Portfolio
+
+const BTN_CONTROLS = document.querySelectorAll('.portfolio__btn');
+const IMAGES = document.querySelectorAll('.portfolio__img img');
+
+const selectImages = (btns, images) => {
+    for(let btn of btns) {
+        btn.addEventListener('click', e => {
+            let currentBtn = e.currentTarget.dataset.type;
+            for(let i = 0; i < images.length; i++) {
+                images[i].src = `assets/img/${currentBtn}/${i + 1}.jpg`;
+                images[i].alt = `${currentBtn} photo`;
+            }
+        })
+    }
+}
+
+selectImages(BTN_CONTROLS, IMAGES);

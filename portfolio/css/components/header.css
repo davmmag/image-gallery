@@ -30,7 +30,40 @@
 }
 
 .lang__list {
+  display: flex;
+  align-items: center;
+  position: relative;
   margin-right: 35px;
+}
+
+.lang__list::after {
+  content: "/";
+  position: absolute;
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 50px;
+  top: 0;
+  left: 50%;
+}
+
+.lang__item {
+  position: relative;
+}
+
+.lang__item:not(:last-child) {
+  margin-right: 25px;
+}
+
+.btn__lang--active {
+  color: var(--color-mongoose);
+}
+
+.btn__lang {
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 50px;
 }
 
 .header__theme {
