@@ -18,30 +18,3 @@
   color: var(--color-mongoose);
 }
 
-.lang__list {
-  display: flex;
-  position: relative;
-}
-
-.lang__list::after {
-  content: "/";
-  position: absolute;
-  color: var(--color-white);
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 50px;
-  top: 0;
-  left: 50%;
-}
-
-.lang__item {
-  color: var(--color-white);
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 50px;
-  position: relative;
-}
-
-.lang__item:not(:last-child) {
-  margin-right: 25px;
-}

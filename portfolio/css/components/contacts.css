@@ -1,7 +1,6 @@
 .contacts {
   background-image: url(../../assets/img/contacts-bg.jpg);
   background-repeat: no-repeat;
-  background-size: contain;
 }
 
 .contacts__container {
@@ -17,12 +16,16 @@
 }
 
 .contacts__title {
+  color: var(--color-mongoose);
   margin-bottom: 41px;
+  padding: 0;
 }
 
 .contacts__btn {
   padding: 8px 40px;
 }
+
+/* Media Queries */
 
 @media(max-width:768px) {
   .contacts {
@@ -40,6 +43,7 @@
 
   .contacts__title {
     margin-bottom: 52px;
+    text-align: center;
   }
   .contacts button {
     margin: 0 auto;

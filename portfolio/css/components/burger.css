@@ -58,7 +58,6 @@
 }
 
 .burger-active {
-    transform: translateX(20px);
     padding: 134px 0 0 106px;
     display: flex;
     flex-direction: column;
@@ -84,4 +83,10 @@
 
 .burger__list {
     z-index: 1;
+}
+
+@media(max-width: 768px) {
+    .burger-toggle {
+        display: block;
+    }
 }

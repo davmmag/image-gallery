@@ -8,27 +8,36 @@
   display: block;
   cursor: pointer;
 }
+/* Mongoose Button */
 
 .btn_mongoose {
   background-color: var(--color-mongoose);
   color: var(--color-black);
+  border: none;
 }
 
 .btn_mongoose:hover {
   color: var(--color-white);
+	transform: translatey(-0.65em);
 }
+
+
+
+/* Black Button */
 
 .btn_black {
   background-color: var(--color-black);
   padding: 8px 76px;
-  color: var(--color-mongoose);
-  border: 1px solid var(--color-mongoose);
+  color: var(--thirty-color);
+  border: 1px solid var(--thirty-color);
 }
 
 .btn_black:hover {
   border: 1px solid var(--color-white);
   color: var(--color-white);
+  transform: translatey(-0.65em);
 }
+	
 
 
 

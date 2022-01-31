@@ -17,13 +17,10 @@
 @import 'components/nav.css';
 @import 'components/buttons.css';
 @import 'components/burger.css';
-@import 'media.css';
-
-
-
 
 :root {
   --color-mongoose: #bdae82;
   --color-black: #000000;
   --color-white: #ffffff;
+  --width: 100%;
 }
