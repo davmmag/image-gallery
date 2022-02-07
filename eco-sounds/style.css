@@ -1,14 +1,4 @@
-@font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    src: url('./assets/fonts/roboto-700.eot');
-    src: local(''),
-         url('./assets/fonts/roboto-700.eot?#iefix') format('embedded-opentype'),
-         url('./assets/fonts/roboto-700.woff2') format('woff2'),
-         url('./assets/fonts/roboto-700.woff') format('woff'),
-         url('./assets/fonts/roboto-700.ttf') format('truetype');
-}
+
 
 @font-face {
     font-family: 'Roboto';
