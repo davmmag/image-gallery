@@ -31,6 +31,7 @@ async function getPhotos(url) {
         } else {throw new Error(response.statusText);}
     } catch(err) {
         console.log(err);
+        getPhotos(`https://api.unsplash.com/photos?page=2&per_page=21&client_id=wdMiGp849PdPDqo6Dbf8rws33Fwjfjz8qjknrDVbs_U`);
     }
 
 }
@@ -76,7 +77,6 @@ const clearSearchValue = (deleteValue) => {
 
 search.addEventListener('input', () =>  {
     clearSearchValue();
-    url = `https://api.unsplash.com/search/photos?query=${search.value}&per_page=21&client_id=wdMiGp849PdPDqo6Dbf8rws33Fwjfjz8qjknrDVbs_U`;
 });
 
 close.addEventListener('click', () => clearSearchValue(true));
@@ -114,3 +114,4 @@ searchBtn.addEventListener('click', () => {
 //         console.log(err);
 //     }
 // }
+
