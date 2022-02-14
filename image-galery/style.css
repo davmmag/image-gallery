@@ -50,8 +50,6 @@ span {
     background: #fff;
 }
 
-
-
 .search__block {
     position: relative;
 }
@@ -79,7 +77,6 @@ span {
     z-index: 1;
     cursor: pointer;
     opacity: 0;
-    /* display: none; */
     transition: all .2s ease-in;
 }
 
@@ -160,6 +157,7 @@ span {
     .search {
         width: 200px;
     }
+
     .content-img {
         height: 260px;
     } 
@@ -179,6 +177,7 @@ span {
         align-self: flex-end;
         margin-top: 20px;
     }
+
     .close__icon,
     .search__icon {
         top: 47%;
@@ -195,23 +194,14 @@ span {
     .footer__container {
         padding-top: 0;
     }
+
     .footer__logo {
         width: 120px;
     }
+
     .footer__year,
     .footer__link {
         font-size: 23px;
         line-height: 27px;
     }
-}
-
-
-.light {
-    --first-color: #000;
-    --second-color: #fff;
-}
-
-.dark {
-    --first-color: #fff;
-    --second-color: #000;
 }

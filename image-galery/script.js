@@ -48,9 +48,7 @@ search.addEventListener('keydown', e => {
 
 const clearSearchValue = (deleteValue) => {
     close.style.opacity = '1';
-    if(search.value === '') {
-        close.style.opacity = 0;
-    }
+    if(search.value === '') close.style.opacity = 0;
     if(deleteValue) {
         search.value = '';
         close.style.opacity = 0;
