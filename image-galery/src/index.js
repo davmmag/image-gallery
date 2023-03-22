@@ -1,3 +1,5 @@
+import './styles/style.scss';
+
 const search = document.querySelector('.search');
 const content = document.querySelector('.content');
 const img = document.querySelector('.content-img');
@@ -7,7 +9,7 @@ let url = `https://api.unsplash.com/photos?page=2&per_page=21&client_id=wdMiGp84
 
 const createImages = (src) => {
     let img = document.createElement('div');
-    img.className = 'content-img';
+    img.className = 'content__img';
     img.title = src.description;
     img.style.backgroundImage = `url(${src})`;
     content.append(img);

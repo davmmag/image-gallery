@@ -1,0 +1,35 @@
+.footer {
+  &__container {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    background-image: url(./assets/svg/rss.svg);
+    background-repeat: no-repeat;
+    width: 170px;
+    height: 60px;
+    background-size: contain;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    &__container {
+      padding-top: 0;
+    }
+
+    &__logo {
+      width: 120px;
+    }
+
+    &__year,
+    &__link {
+      font-size: 23px;
+      line-height: 1.2;
+    }
+  }
+}
