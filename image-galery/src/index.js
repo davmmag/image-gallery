@@ -1,70 +1,65 @@
 import './styles/style.scss';
 
-const search = document.querySelector('.search');
-const content = document.querySelector('.content');
-const img = document.querySelector('.content-img');
-const close = document.querySelector('.close__icon');
-const searchBtn = document.querySelector('.search__icon');
-let url = `https://api.unsplash.com/photos?page=2&per_page=21&client_id=wdMiGp849PdPDqo6Dbf8rws33Fwjfjz8qjknrDVbs_U`;
+const SEARCH = document.querySelector('.search');
+const CONTENT = document.querySelector('.content');
+const CLEAR_ICON = document.querySelector('.search__close-icon');
+const BTN_SEARCH = document.querySelector('.search__icon');
+let URL = `https://api.unsplash.com/photos?page=2&per_page=21&client_id=wdMiGp849PdPDqo6Dbf8rws33Fwjfjz8qjknrDVbs_U`;
 
-const createImages = (src) => {
-    let img = document.createElement('div');
-    img.className = 'content__img';
-    img.title = src.description;
-    img.style.backgroundImage = `url(${src})`;
-    content.append(img);
-    img.addEventListener('click', () => {
-        window.open(src, '_blank');
-    });
-}
+const createImg = (src, name, container) => {
+  let img = document.createElement('div');
+  img.classList.add(name);
+  img.title = src.description;
+  img.style.backgroundImage = `url(${src})`;
+  container.append(img);
+  img.addEventListener('click', () => window.open(src, '_blank'));
+};
 
-async function getPhotos(url) {
-    try {
-        let response = await fetch(url);
-        if(response.ok) {
-            let data = await response.json();
-            if(data.results) {
-                for(let item of data.results) {createImages(`${item.urls.raw}&w=1366&h=768`);}
-            }
-            for(let item in data) {
-                createImages(`${data[item].urls.raw}&w=1366&h=768`);
-            }
-        } else {throw new Error(response.statusText);}
-    } catch(err) {
-        console.log(err);
-        getPhotos(`https://api.unsplash.com/photos?page=2&per_page=21&client_id=wdMiGp849PdPDqo6Dbf8rws33Fwjfjz8qjknrDVbs_U`);
+const getPhotos = async (url) => {
+  try {
+    const RESPONSE = await fetch(url);
+    if(RESPONSE.ok) {
+      let data = await RESPONSE.json();
+      if(data.results) {
+        for (let item of data.results) { 
+          createImg(`${item.urls.raw}&w=1366&h=768`, 'content__img', CONTENT);
+        }
+      } else {
+        for (let item in data) {
+          createImg(`${data[item].urls.raw}&w=1366&h=768`, 'content__img', CONTENT);
+        }
+      }
     }
+  } catch(err) {
+    console.log(err);
+    getPhotos(`https://api.unsplash.com/photos?page=2&per_page=21&client_id=wdMiGp849PdPDqo6Dbf8rws33Fwjfjz8qjknrDVbs_U`);
+  }
+};
 
-}
+const updateGallery = () => {
+  CONTENT.innerHTML = '';
+  getPhotos(URL);
+};
 
-window.addEventListener('load', () => {
-    search.focus();
-    getPhotos(url);
-});
-search.addEventListener('keydown', e => {
-    if(e.key === 'Enter') {
-        content.innerHTML = '';
-        getPhotos(url);
-    }
-});
+const clearSearchValue = (deleteValue, deleteButton, searchBlock) => {
+  deleteButton.style.opacity = '1';
+  if (searchBlock.value === '') deleteButton.style.opacity = 0;
+  if(deleteValue) {
+    searchBlock.value = '';
+    deleteButton.style.opacity = 0;
+  }
+};
 
-const clearSearchValue = (deleteValue) => {
-    close.style.opacity = '1';
-    if(search.value === '') close.style.opacity = 0;
-    if(deleteValue) {
-        search.value = '';
-        close.style.opacity = 0;
-    }
-}
+window.addEventListener('load', () => getPhotos(URL));
 
-search.addEventListener('input', () =>  {
-    clearSearchValue();
-    url = `https://api.unsplash.com/search/photos?query=${search.value}&per_page=21&client_id=wdMiGp849PdPDqo6Dbf8rws33Fwjfjz8qjknrDVbs_U`;
+SEARCH.addEventListener('keydown', e => {
+    if (e.key === 'Enter') updateGallery();
 });
 
-close.addEventListener('click', () => clearSearchValue(true));
+SEARCH.addEventListener('input', () =>  {
+    clearSearchValue(null, CLEAR_ICON, SEARCH);
+    URL = `https://api.unsplash.com/search/photos?query=${SEARCH.value}&per_page=21&client_id=wdMiGp849PdPDqo6Dbf8rws33Fwjfjz8qjknrDVbs_U`;
+});
 
-searchBtn.addEventListener('click', () => {
-    content.innerHTML = '';
-    getPhotos(url);
-})
+CLEAR_ICON.addEventListener('click', () => clearSearchValue(true, CLEAR_ICON, SEARCH));
+BTN_SEARCH.addEventListener('click', () => updateGallery());
