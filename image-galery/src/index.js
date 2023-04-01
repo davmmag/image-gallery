@@ -6,6 +6,19 @@ const CLEAR_ICON = document.querySelector('.search__close-icon');
 const BTN_SEARCH = document.querySelector('.search__icon');
 let URL = `https://api.unsplash.com/photos?page=2&per_page=21&client_id=wdMiGp849PdPDqo6Dbf8rws33Fwjfjz8qjknrDVbs_U`;
 
+const loadData = async (url) => {
+  try {
+    const RESPONSE = await fetch(url);
+    if (RESPONSE.ok) {
+      let data = await RESPONSE.json();
+      return data;
+    }
+  } catch (err) {
+    console.log(err);
+    loadData(URL);
+  }
+};
+
 const createImg = (src, name, container, title) => {
   let img = document.createElement('div');
   img.classList.add(name);
