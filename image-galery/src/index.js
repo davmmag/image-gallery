@@ -20,7 +20,7 @@ const loadData = async (url) => {
 };
 
 const createImg = (src, name, container, title) => {
-  let img = document.createElement('div');
+  const img = document.createElement('div');
   img.classList.add(name);
   img.title = title;
   img.style.backgroundImage = `url(${src})`;
