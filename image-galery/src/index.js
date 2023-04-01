@@ -40,11 +40,6 @@ const createGallery = async (container, nameOfImage, url) => {
       createImg(`${data[item]['urls']['raw']}&w=1366&h=768`, nameOfImage, container, data[item]['alt_description']);
     }
   }
-    }
-  } catch(err) {
-    console.log(err);
-    getPhotos(`https://api.unsplash.com/photos?page=2&per_page=21&client_id=wdMiGp849PdPDqo6Dbf8rws33Fwjfjz8qjknrDVbs_U`);
-  }
 };
 
 const createSearchURL = (query) => `https://api.unsplash.com/search/photos?query=${query}&per_page=21&client_id=wdMiGp849PdPDqo6Dbf8rws33Fwjfjz8qjknrDVbs_U`;
