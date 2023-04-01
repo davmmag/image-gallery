@@ -47,10 +47,7 @@ const createGallery = async (container, nameOfImage, url) => {
   }
 };
 
-const updateGallery = () => {
-  CONTENT.innerHTML = '';
-  getPhotos(URL);
-};
+const createSearchURL = (query) => `https://api.unsplash.com/search/photos?query=${query}&per_page=21&client_id=wdMiGp849PdPDqo6Dbf8rws33Fwjfjz8qjknrDVbs_U`;
 
 const clearSearchValue = (clearButton, searchBlock) => {
   if (searchBlock.value.length) {
@@ -70,13 +67,20 @@ window.addEventListener('load', () => {
 });
 
 SEARCH.addEventListener('keydown', e => {
-  if (e.key === 'Enter') updateGallery();
+  if (e.key === 'Enter' && SEARCH.value.length) {
+    const searchURL = createSearchURL(SEARCH.value);
+    createGallery(CONTENT, 'content__img', searchURL);
+  }
 });
 
 SEARCH.addEventListener('input', () =>  {
-  clearSearchValue(null, CLEAR_ICON, SEARCH);
-  URL = `https://api.unsplash.com/search/photos?query=${SEARCH.value}&per_page=21&client_id=wdMiGp849PdPDqo6Dbf8rws33Fwjfjz8qjknrDVbs_U`;
+  changeButtonState(CLEAR_ICON, SEARCH);
 });
 
-CLEAR_ICON.addEventListener('click', () => clearSearchValue(true, CLEAR_ICON, SEARCH));
-BTN_SEARCH.addEventListener('click', () => updateGallery());
+CLEAR_ICON.addEventListener('click', () => clearSearchValue(CLEAR_ICON, SEARCH));
+BTN_SEARCH.addEventListener('click', () => {
+  if (SEARCH.value.length) {
+    const searchURL = createSearchURL(SEARCH.value);
+    createGallery(CONTENT, 'content__img', searchURL);
+  }
+});
