@@ -28,20 +28,18 @@ const createImg = (src, name, container, title) => {
   img.addEventListener('click', () => window.open(src, '_blank'));
 };
 
-const getPhotos = async (url) => {
-  try {
-    const RESPONSE = await fetch(url);
-    if(RESPONSE.ok) {
-      let data = await RESPONSE.json();
-      if(data.results) {
-        for (let item of data.results) { 
-          createImg(`${item.urls.raw}&w=1366&h=768`, 'content__img', CONTENT, item.alt_description);
-        }
-      } else {
-        for (let item in data) {
-          createImg(`${data[item].urls.raw}&w=1366&h=768`, 'content__img', CONTENT, data[item].alt_description);
-        }
-      }
+const createGallery = async (container, nameOfImage, url) => {
+  const data = await loadData(url);
+  container.innerHTML = '';
+  if (data['results']) {
+    for (let item of data['results']) {
+      createImg(`${item['urls']['raw']}&w=1366&h=768`, nameOfImage, container, item['alt_description']);
+    }
+  } else {
+    for (let item in data) {
+      createImg(`${data[item]['urls']['raw']}&w=1366&h=768`, nameOfImage, container, data[item]['alt_description']);
+    }
+  }
     }
   } catch(err) {
     console.log(err);
