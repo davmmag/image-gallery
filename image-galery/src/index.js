@@ -52,16 +52,22 @@ const updateGallery = () => {
   getPhotos(URL);
 };
 
-const clearSearchValue = (deleteValue, deleteButton, searchBlock) => {
-  deleteButton.style.opacity = '1';
-  if (searchBlock.value === '') deleteButton.style.opacity = 0;
-  if(deleteValue) {
+const clearSearchValue = (clearButton, searchBlock) => {
+  if (searchBlock.value.length) {
     searchBlock.value = '';
-    deleteButton.style.opacity = 0;
+    clearButton.style.opacity = 0;
   }
 };
 
-window.addEventListener('load', () => getPhotos(URL));
+const changeButtonState = (clearBtn, searchBlock) => {
+  clearBtn.style.opacity = '1';
+  if (searchBlock.value === '') clearBtn.style.opacity = 0;
+}
+
+window.addEventListener('load', () => {
+  clearSearchValue(CLEAR_ICON, SEARCH);
+  createGallery(CONTENT, 'content__img', URL);
+});
 
 SEARCH.addEventListener('keydown', e => {
   if (e.key === 'Enter') updateGallery();
